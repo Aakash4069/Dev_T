@@ -1,0 +1,22 @@
+{
+  "name": "dev_t",
+  "version": "1.0.0",
+  "description": "We will build a global cli utility that will support following commands\r * mycli help\r * mycli view <dirname> --tree \r * mycli view <dirname> --flat\r * mycli organize <dirname>\r * mycli organize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aakash4069/Dev_T.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aakash4069/Dev_T/issues"
+  },
+  "homepage": "https://github.com/Aakash4069/Dev_T#readme",
+  "dependencies": {
+    "node.js": "0.0.1-security"
+  }
+}

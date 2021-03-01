@@ -25,3 +25,6 @@ switch (command) {
 //view
 //organize
 //help
+
+//command for run 
+// node mycli.js view "/home/akky/Dev_T/1st" tree        this will display in tree format 

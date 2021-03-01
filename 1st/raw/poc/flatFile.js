@@ -1,5 +1,5 @@
 let fs=require("fs");
-let path
+let path=require("path");
 
 
 function isFileorNot(src){
@@ -28,4 +28,24 @@ function viewFlat(src){
     }
 }
 
-viewFlat(process.argv[2]);
+function viewTree(src,indent){
+    let isFile=isFileorNot(src);
+    if(isFile==true){
+        console.log(indent,path.basename(src));
+    }
+    else{
+        console.log(indent ,path.basename(src));
+        let fDirname=readContent(src);
+
+        for(let i=0;i<fDirname.length;i++){
+            let child=fDirname[i];
+
+            // let dirNamepath=src+"\\"+child;
+            let dirNamepath=path.join(src,child);
+            viewTree(dirNamepath,indent+"\t");
+        }
+    }
+}
+
+let input =process.argv.slice(2);
+viewTree(input[0],"");

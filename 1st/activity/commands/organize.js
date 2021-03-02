@@ -2,7 +2,7 @@ let utility = require("../utility/util");
 let path=require("path");
 let fs=require("fs");
 function organizefn(dir) {
-    let src = dir || process.cwd();
+    let src = dir || process.cwd();                // this is 
     let dest = path.join(src, "organized_files");
     // console.log(src);
     if (fs.existsSync(dest) == false) {

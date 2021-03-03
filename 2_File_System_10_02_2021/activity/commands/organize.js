@@ -76,7 +76,8 @@ function organizefn(src){
     organizeFile(src);
 }
 
-organizeFile(process.argv[2]);
+// organizeFile(process.argv[2]);              // this line need to comment before you run from below command , this line take input when we run organize file only and command would be : node oragnize.js "/home/akky/Dev_T/2_File_System_10_02_2021"
+                                                // node mycli.js organize "/home/akky/Dev_T/2_File_System_10_02_2021"
 module.exports = {
     fn: organizefn
 }

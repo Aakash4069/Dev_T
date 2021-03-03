@@ -18,8 +18,6 @@
   "homepage": "https://github.com/Aakash4069/Dev_T#readme",
   "dependencies": {
     "node.js": "0.0.1-security"
-  },
-  "bin":{
-    "myutil": "mycli.js"
   }
+ 
 }

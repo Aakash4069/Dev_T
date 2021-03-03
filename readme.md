@@ -32,7 +32,7 @@ We will build a global cli utility that will support following commands
 * Run from the belew commands 
 
 
-## commands to run the file when it not globle 
+### commands to run the file when it not globle 
   ## When you run from organize.js file
   
  organizeFile(process.argv[2]) This line need to comment before you run from below command. This line take input when we run organize file only, command for run organized file: node oragnize.js " This line need to comment before you run from below command ome/akky/Dev_T/2_File_System_10_02_2021"
@@ -43,7 +43,8 @@ We will build a global cli utility that will support following commands
 
 
 
-## To make it globle organize commands, it will pass through make mycli.js
+## To make Script globle.follow the below step to make it global. it will pass through make mycli.js
+
  * step to make it globall
  * step 1: npm init
  * step 2: add this line to myclis.js   #!/user/bin/env node

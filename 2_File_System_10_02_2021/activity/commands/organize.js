@@ -69,7 +69,12 @@ function organizer(src,dest){
 
 }
 // nodejs -> export
-
+function organizefn(src){
+    if(src==undefined){
+        src=process.cwd();
+    }
+    organizeFile(src);
+}
 
 organizeFile(process.argv[2]);
 module.exports = {

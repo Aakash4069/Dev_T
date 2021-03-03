@@ -25,17 +25,25 @@ We will build a global cli utility that will support following commands
 * npm link and make it global
 
 
+## install dependency.
+* npm install node
+* npm init
+* Flow the file Sturcture as shown above 
+* Run from the belew commands 
 
 
-
-// commands to run the file when it not globle 
-// this line need to comment before you run from below command , this line take input when we run organize file only and command would be : node oragnize.js "/home/akky/Dev_T/2_File_System_10_02_2021"
+## commands to run the file when it not globle 
+  ## When you run from organize.js file
+  
+ organizeFile(process.argv[2]) This line need to comment before you run from below command. This line take input when we run organize file only, command for run organized file: node oragnize.js " This line need to comment before you run from below command ome/akky/Dev_T/2_File_System_10_02_2021"
+  ## When you run from mycli.js file
+  
 // node mycli.js organize "/home/akky/Dev_T/2_File_System_10_02_2021"
 
 
 
-/**
- * To make it globle organize commands, it will pass through make mycli.js
+
+## To make it globle organize commands, it will pass through make mycli.js
  * step to make it globall
  * step 1: npm init
  * step 2: add this line to myclis.js   #!/user/bin/env node
@@ -62,4 +70,4 @@ We will build a global cli utility that will support following commands
              npm unlink 
              npm link
 
- */
+ 

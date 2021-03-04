@@ -10,5 +10,8 @@
   "license": "ISC",
   "bin": {
     "myutil": "mycli.js"
+  },
+  "dependencies": {
+    "node": "^15.10.0"
   }
 }

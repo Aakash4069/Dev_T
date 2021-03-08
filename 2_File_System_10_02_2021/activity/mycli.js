@@ -9,7 +9,7 @@ let input = process.argv.slice(2);              //
 let command = input[0];
 // path
 switch (command) {
-    case "view":
+    case "view":    
         viewFile.fn(input[1], input[2]);
         break;
     case "organize":

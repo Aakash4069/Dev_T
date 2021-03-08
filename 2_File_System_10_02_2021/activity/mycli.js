@@ -6,6 +6,7 @@ let viewFile = require("./commands/view");
 let organizeFile = require("./commands/organize");
 let input = process.argv.slice(2);              //
 // node mycli.js [view ,dirName]
+
 let command = input[0];
 // path
 switch (command) {

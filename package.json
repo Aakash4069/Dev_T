@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Aakash4069/Dev_T#readme",
   "dependencies": {
-    "node.js": "0.0.1-security"
+    "node.js": "0.0.1-security",
+    "request": "^2.88.2"
   }
- 
 }

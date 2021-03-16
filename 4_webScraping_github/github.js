@@ -1,5 +1,6 @@
 let request=require("request");
 let cheerio= require("cheerio");
+let repoPageObj=require("./extractRepo.js");
 
 let url="https://github.com/topics";
 request(url,cb);
@@ -25,8 +26,11 @@ function githubtopics(html){
         let fulllink="https://www.github.com/"+link;
         // console.log(topicName);
 
-        console.log(topicName+"  =>  "+fulllink);
+        // console.log(topicName+"  =>  "+fulllink);
+        repoPageObj.extractRepoLinks(fulllink);
         // console.log(err);
-
     }
+
+
+
 }

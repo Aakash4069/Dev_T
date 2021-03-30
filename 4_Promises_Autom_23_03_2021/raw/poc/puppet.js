@@ -22,5 +22,10 @@ browseropenP.then(function (browser){
     let googlehomePageOpenPromises=gPage.goto("https://www.google.com");
     return googlehomePageOpenPromises;
 }).then(function (){
-    console.log("google home page opened")
+    function f(){
+        //first entery
+        // innerText
+        //value
+        return document.querySelector(".best")
+    }
 })

@@ -17,9 +17,10 @@ module.exports={
             int res = 0;
             for(int i = 0; i <= 100; i++){
                  res += freq[i] / 2;
-             }--unhandled-rejections=strict
+             }
             cout << res << endl;
             return 0;
-        }`
+        }
+        `
     ]
 }

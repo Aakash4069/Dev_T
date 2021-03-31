@@ -1,4 +1,6 @@
 const puppeteer=require("puppeteer");
+const {email,password}=require("./credential");
+let {answers}=require("./code");
 let  cTab;
 // let email=naveen@mailree.live;
 // let password=Naveen@123;
@@ -16,10 +18,10 @@ browserOpenPromise.then(function(browser){
     let visitLoginpagePromise=cTab.goto("https://hackerrank.com/auth/login");
     return visitLoginpagePromise;
 }).then(function (){
-    let emailWillTypePromise=cTab.type("input[name='username']","naveen@mailree.live",{delay:200});
+    let emailWillTypePromise=cTab.type("input[name='username']",email,{delay:200});
     return emailWillTypePromise;
 }).then(function (){
-    let passwordWillTypeprimse=cTab.type("input[name='password']","Naveen@123",{delay : 200});
+    let passwordWillTypeprimse=cTab.type("input[name='password']",password,{delay : 200});
     return passwordWillTypeprimse;
 }).then(function (){
     let submitbuttan=cTab.click("button[data-analytics='LoginPassword']");
@@ -69,7 +71,8 @@ browserOpenPromise.then(function(browser){
 
 })
 .then(function (linkArr){
-    console.log(linkArr);
+    let questionWillBeSolvedPromise=questionSolve(linkArr[0],0);
+    return questionWillBeSolvedPromise;
 })
 .then(function (){
     console.log("Reached warm up module");
@@ -77,6 +80,7 @@ browserOpenPromise.then(function(browser){
 .catch(function (err){
     console.log(err);
 })
+
 
 function waitAndClick(Selector){
 
@@ -92,6 +96,30 @@ function waitAndClick(Selector){
             resolve();
         }).catch(function (err){
             reject();
+        })
+    })
+}
+
+function questionSolve(url){
+    return new Promise(function (resolve,reject){
+        // going to question  page 
+        let fullLink=`https://www.hackerrank.com${url}`;
+        let goToQuestionPagePromise=cTab.goto(fullLink);
+
+        goToQuestionPagePromise.then(function (){
+            let waitForCheckBoxAndClick=waitAndClick(".custom-input-checkbox");
+            return waitForCheckBoxAndClick;
+        }).then(function (){
+            let waitForCheckBox=cTab.waitForSelector(".custominput",{visible:true});
+            return waitForCheckBox;
+        }).then(function (){
+            let codeWillBeAddedPromise=cTab.type(".custominput",answers[0],{delay:100});
+            return codeWillBeAddedPromise;
+        }).then(function (){
+            resolve();
+
+        }).then(function (err){
+            reject(err);
         })
     })
 }

@@ -7,7 +7,7 @@ module.exports={
         int main() {
             int n;
             cin>>n;
-            int freq[101] = {};
+            i   nt freq[101] = {};
             for(int i = 0; i < n; i++) {
                 int c;
                 cin >> c;

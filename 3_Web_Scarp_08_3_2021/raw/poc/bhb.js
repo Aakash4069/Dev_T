@@ -17,6 +17,7 @@ function cb(err, respose, html) {
     for (let i = 0; i < tables.length; i++) {
         batsmanHtmlString += $(tables[i]).html(); //just to print the html
         let teamBowlers = $(tables[i]).find("tr");
+        console.log(tr.length());
         for (let j = 0; j < 10; j++) {
 
             let eachbowlcol = $(teamBowlers[j]).find("td");
